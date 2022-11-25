@@ -46,7 +46,6 @@ async function activeTab(block) {
 
     const [tab] = await browser.tabs.query({
       active: true,
-      lastFocusedWindow: true,
     });
     if (!tab || !tab?.url.startsWith('http')) {
       const error = new Error('invalid-active-tab');
